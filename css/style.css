@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #6a994e;
+}
+
+body {
+  margin: 2rem auto;
+  padding: 0 5rem;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 1rem;
+}
+
+main > div:first-child {
+  aspect-ratio: 1;
+  max-height: 250px;
+}
+
+.card {
+  padding: 1rem;
+  border-radius: 5px;
+  border: 2px solid #bc4749;
+  background: #f2e8cf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
