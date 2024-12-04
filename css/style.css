@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   color: #6a994e;
+  list-style-type: none;
 }
 
 body {
@@ -11,19 +12,28 @@ body {
   display: grid;
   grid-template-areas:
     "header"
-    "content"
-    "footer";
+    "content";
 }
 
-main {
+header {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  margin-bottom: 1rem;
+}
+
+#home main {
   display: grid;
+  grid-template-areas:
+    "top-left top-right"
+    "bottom-left bottom-right";
   grid-template-columns: 1fr 5fr;
   gap: 1rem;
 }
 
-main > div:first-child {
-  aspect-ratio: 1;
-  max-height: 250px;
+#home main > div:first-child {
+  display: flex;
+  justify-content: center;
 }
 
 .card {
@@ -31,7 +41,68 @@ main > div:first-child {
   border-radius: 5px;
   border: 2px solid #bc4749;
   background: #f2e8cf;
-  display: flex;
-  align-items: center;
+}
+
+#tecnos {
   justify-content: center;
+  text-align: center;
+}
+
+#tecnos hr {
+  margin: 5px auto;
+  width: 75%;
+  border: solid white 1px;
+}
+
+#tecnos hr.eva {
+  height: 2px;
+  border: none;
+}
+
+#tecnos hr.eva-2 {
+  background: linear-gradient(to right, #6a994e 40%, white 40%);
+}
+
+#tecnos hr.eva-3 {
+  background: linear-gradient(to right, #6a994e 60%, white 40%);
+}
+
+#tecnos hr.eva-4 {
+  background: linear-gradient(to right, #6a994e 80%, white 20%);
+}
+
+#tecnos hr.eva-5 {
+  background-color: #6a994e;
+}
+
+#projs main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card.small,
+.card.big {
+  padding: 0;
+  justify-content: center;
+  text-align: center;
+}
+
+.card.big p {
+  text-align: left;
+  padding: 1rem;
+}
+
+.card.small {
+  width: 10rem;
+}
+
+.card.big {
+  width: 20rem;
+  min-height: 25rem;
+}
+
+img {
+  max-width: 100%;
 }
